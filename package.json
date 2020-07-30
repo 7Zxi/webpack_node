@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon ./bin/www",
-    "build": "pm2 start ./bin/www --name egapi",
-    "reload": "pm2 reload egapi",
-    "dev": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js"
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js",
+    "publish": "pm2 start ./bin/www --name egapi",
+    "reload": "pm2 reload egapi"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.10.5",

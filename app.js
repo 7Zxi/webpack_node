@@ -6,6 +6,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const routerLoad = require('./cores/route');
 const cors = require('cors');
+const view = require('./cores/view');
 const session = require('./cores/session');
 const dbConnect = require('./cores/dbConnect');
 const app = express();
@@ -46,10 +47,13 @@ if (process.env.NODE_ENV === 'development') {
 app.use(cors());
 
 //连接mongodb数据库
-dbConnect();
+//dbConnect();
 
 //添加session中间件
-app.use(session())
+//app.use(session())
+
+//添加视图渲染方式中间件
+app.use(view);
 
 //载入路由
 routerLoad(app);

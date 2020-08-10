@@ -1,6 +1,8 @@
 #### 框架架构
 node+express+webpack+art-template
 
+> 模板支持多层include嵌套
+
 
 #### 运行方式
  - 初始化 `npm install`    

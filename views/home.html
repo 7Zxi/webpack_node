@@ -5,9 +5,27 @@
     <title>home</title>
 </head>
 <body>
-    <h1>home</h1>
-    <img src="../public/image/1.jpg">
-    <div class="a1"></div>
-    <div class="a2"></div>
+
+<div>
+    {{include './user/acc.html'}}
+</div>
+{{include './user/t1.html'}}
+{{include './user/t2.html'}}
+
+<h1><%= name %></h1>
+
+{{each name}}
+
+<h6>{{$index}}, {{$value}}</h6>
+
+{{/each}}
+
+
+<img src="../public/image/index.jpg" alt="index">
+<div class="a1"></div>
+<div class="a2"></div>
+
 </body>
 </html>
+
+

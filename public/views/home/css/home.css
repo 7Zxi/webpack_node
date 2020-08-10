@@ -8,7 +8,7 @@ body{
 }
 .a1{
     height:100px;
-    background:url(/public/image/1.jpg) no-repeat;
+    background:url(../../../image/1.jpg) no-repeat;
 }
 .a2{
     height:100px;

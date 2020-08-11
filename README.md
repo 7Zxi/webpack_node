@@ -1,5 +1,5 @@
 #### 框架架构
-node+express+webpack+art-template
+node + express + webpack + art-template + mongoDB
 
 > 模板支持多层include嵌套
 

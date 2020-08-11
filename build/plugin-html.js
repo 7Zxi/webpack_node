@@ -7,14 +7,12 @@ let plugins = [];
 Object.keys(entry).forEach(data => {
 
     // 处理嵌套文件夹路径
-    let dirPath = entry[data].split('\\');
+    let dirPath = entry[data].split(/\\|\/|\\\\|\/\//);
     let startIndex = dirPath.indexOf('views') + 1;
     let endIndex = dirPath.indexOf('js');
-    let pathFile = dirPath.slice(startIndex, endIndex).join('/') + '.html';
-
+    let pathFile = dirPath.slice(startIndex, endIndex === -1 ? undefined : endIndex).join('/') + '.html';
     let template = path.join(__dirname, '../views', pathFile);
     let filename = path.join(__dirname, '../dist/views', pathFile);
-
     plugins.push(new HtmlWebpackPlugin(createParams(template, filename, data)));
 })
 

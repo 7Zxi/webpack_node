@@ -21,7 +21,7 @@ function addEntry(src, param) {
     if (list.length === 0) return console.log('请输入正确的打包路径');
 
     list.forEach(data => {
-        let finalPath = data.split('/').pop();
+        let finalPath = data.split(/\\|\/|\\\\|\/\//).pop();
 
         if (fs.statSync(data).isFile()) {
             if (finalPath.includes('.html')) {
